@@ -1,4 +1,3 @@
-
 ---
 title: "PIDE Policy Viewpoint <img src=\"PIDE-logo.jpg\" style=\"float: right;\"/> "
 author : "Dr. Durre Nayyab "
@@ -9,7 +8,6 @@ output:
     bibliography: references.bib  
 
 ---
-
 
 ```{r setup, include=FALSE}
 ## Global options
