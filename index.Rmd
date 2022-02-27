@@ -2,12 +2,12 @@
 title: "PIDE Policy Viewpoint <img src=\"PIDE-logo.jpg\" style=\"float: right;\"/> "
 author : "Dr. Durre Nayyab "
 date: "`r Sys.Date()`"
-
 output:
-  prettydoc::html_pretty:
-    theme: cayman
----
+  rmdformats::readthedown:
+    highlight: espresso
+    bibliography: references.bib  
 
+---
 
 
 ```{r setup, include=FALSE}
@@ -193,8 +193,7 @@ which is the need of the time has been delayed because policy is driven more by 
 Finally, government should take seriously the PIDE recommendation that local universities and think tanks must be
 involved in policy, policy research and policymaking. Nothing without being thoroughly reviewed should be taken to the
 policy table. Our experience tells us that reliance on consultants without domestic oversight has too often proved costly. And
-the 10 million housing shortage estimate is nothing but yet another proof of this cost! 
-
+the 10 million housing shortage estimate is nothing but yet another proof of this cost!
 
 > **Prepared by Dr. Durre Nayab. PIDE Policy Viewpoint is an initiative for an
 informed policy-making through evidence-based
