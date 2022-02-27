@@ -1,10 +1,9 @@
 ---
-title: "PIDE Policy Viewpoint <img src=\"PIDE-logo.jpg\" style=\"float: right;\"/>   "
+title: "PIDE Policy Viewpoint  "
 author : "Dr. Durre Nayyab "
 date: "`r Sys.Date()`"
 
 output:
-  
   prettydoc::html_pretty:
     theme: cayman
 ---
