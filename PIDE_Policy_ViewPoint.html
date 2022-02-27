@@ -7,6 +7,7 @@
 
         <meta name="author" content="Dr. Durre Nayyab" />
     
+        <meta name="date" content="2022-02-27" />
     
     <title>PIDE Policy Viewpoint </title>
 
@@ -133,7 +134,7 @@
     </div>
     <div id="postamble" data-toggle="wy-nav-shift" class="status">
                   <p class="author"><span class="glyphicon glyphicon-user"></span> Dr. Durre Nayyab</p>
-                        <p class="date"><span class="glyphicon glyphicon-calendar"></span> <code>r Sys.Date()</code></p>
+                        <p class="date"><span class="glyphicon glyphicon-calendar"></span> 2022-02-27</p>
           </div>
    </div>
      
@@ -143,7 +144,6 @@
    
 <!-- Don't indent these lines or it will mess pre blocks indentation --> 
 <div id="main">
-<p><code>{r setup, include=FALSE} ## Global options knitr::opts_chunk$set(cache = TRUE)</code></p>
 <div id="the-assumed-shortage-of-housing" class="section level2">
 <h2>The Assumed Shortage of Housing</h2>
 <p>“We are short of 10 million housing units” has been the clarion cry in politics, media and the donor-driven research for the last 10 years. Given an average household size of well over six persons<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>, this means that nearly one-third of the population is without housing. Do we see such a huge number of people living on footpaths, side of roads, under bridges or in any open area? <strong>Thankfully, NO!</strong></p>
@@ -158,35 +158,192 @@
 <h3>IS CONGESTION THE SOURCE OF “HOUSING SHORTAGE”?</h3>
 <p>Using the definition given by the UN-Habitat.<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a> , <em>“a house is considered to have a sufficient living area for the household members if not more than 3 people share the habitable room that is a minimum of 4m2 in area”</em>. The 4m2 was rightly upgraded to 9m2 , as the measurement was too small. We do not get room sizes in the PSLM, but the number of living rooms is covered in the survey. Since 9 sq^2 is a typical size even in informal settlements so we would go by the number of persons per room to estimate congestion.</p>
 <p>Our estimates suggest that 4.37 million households, equaling 12.3% of the total households, live in congested conditions, with over two-thirds of these in rural areas (3.04 million), as shown in Table 1. Young children generally live/sleep in their parents’ room so we do not include children aged under 5 years, and half-count those under 12 years, while estimating occupancy per room. So, if congestion is the rationale behind the 10 million housing deficit, our estimates give a much lower number.</p>
-<p><code>{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE, results=&#39;asis&#39;} library(readxl) library(dplyr) library(DT) housing &lt;- read_excel(&quot;housing.xlsx&quot;) View(housing) housing&lt;-as.data.frame(housing) knitr::kable(housing, caption = &quot;Number and Proportion of Households Living in Congested Conditions&quot;,col.names = c(&#39;&#39;, &#39;Total number of households (million)&#39;, &#39;Household with occupancy of over 3 persons per room (million)&#39;, &#39;Proportion living in crowded conditions (%)&#39;))</code> Some inter-provincial differences are also found (see Table 2).</p>
-<p>```{r message=FALSE, warning=FALSE,echo=FALSE, paged.print=TRUE} housing1 &lt;- read_excel(“housing.xlsx”, sheet = “Sheet2”) housing1&lt;- as.data.frame(housing1) knitr::kable(housing1, caption = “Table 2 : Proportion of Households Living in Crowded Conditions (%)”,col.names = c(’ ‘, ’Rural’, ‘Urban’, ‘Total’, ‘Number of HH living in crowded conditions (millions)’))</p>
-<pre><code>
-Unlike many countries, joint/extended families are still prevalent in Pakistan, with strong cultural values attached to it.
-The rates, however, are not as high as one would think as 74% of the households have nuclear set-ups, with not very divergent
-trends exhibited by rural and urban Pakistan (see Table 3).
-
-```{r message=FALSE, warning=FALSE, echo=FALSE, paged.print=TRUE}
-housing11 &lt;-  read_excel(&quot;housing.xlsx&quot;, sheet = &quot;table3&quot;)
-housing11&lt;- as.data.frame(housing11)
-knitr::kable(housing11, caption = &quot;Table 3: Family Structure in Pakistan (%)
-&quot;,col.names = c(&#39; &#39;, &#39;Nuclear&#39;, &#39;Extended/Joint&#39;, &#39;Total&#39;))
-</code></pre>
+<table>
+<caption>Number and Proportion of Households Living in Congested Conditions</caption>
+<colgroup>
+<col width="5%" />
+<col width="24%" />
+<col width="40%" />
+<col width="28%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Total number of households (million)</th>
+<th align="right">Household with occupancy of over 3 persons per room (million)</th>
+<th align="right">Proportion living in crowded conditions (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Rural</td>
+<td align="right">21.8</td>
+<td align="right">3.04</td>
+<td align="right">14.0</td>
+</tr>
+<tr class="even">
+<td align="left">Urban</td>
+<td align="right">13.7</td>
+<td align="right">1.33</td>
+<td align="right">9.8</td>
+</tr>
+<tr class="odd">
+<td align="left">Pakistan</td>
+<td align="right">35.5</td>
+<td align="right">4.37</td>
+<td align="right">12.3</td>
+</tr>
+</tbody>
+</table>
+<p>Some inter-provincial differences are also found (see Table 2).</p>
+<table>
+<caption>Table 2 : Proportion of Households Living in Crowded Conditions (%)</caption>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Rural</th>
+<th align="right">Urban</th>
+<th align="right">Total</th>
+<th align="right">Number of HH living in crowded conditions (millions)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Khyber Pakhtunkhwa</td>
+<td align="right">11.1</td>
+<td align="right">12.0</td>
+<td align="right">11.2</td>
+<td align="right">0.58</td>
+</tr>
+<tr class="even">
+<td align="left">Punjab</td>
+<td align="right">12.8</td>
+<td align="right">10.8</td>
+<td align="right">12.0</td>
+<td align="right">2.28</td>
+</tr>
+<tr class="odd">
+<td align="left">Sindh</td>
+<td align="right">21.7</td>
+<td align="right">8.1</td>
+<td align="right">14.2</td>
+<td align="right">1.33</td>
+</tr>
+<tr class="even">
+<td align="left">Balochistan</td>
+<td align="right">10.1</td>
+<td align="right">7.8</td>
+<td align="right">9.5</td>
+<td align="right">0.18</td>
+</tr>
+</tbody>
+</table>
+<p>Unlike many countries, joint/extended families are still prevalent in Pakistan, with strong cultural values attached to it. The rates, however, are not as high as one would think as 74% of the households have nuclear set-ups, with not very divergent trends exhibited by rural and urban Pakistan (see Table 3).</p>
+<table>
+<caption>Table 3: Family Structure in Pakistan (%)</caption>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Nuclear</th>
+<th align="right">Extended/Joint</th>
+<th align="right">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Rural</td>
+<td align="right">72.4</td>
+<td align="right">27.6</td>
+<td align="right">100</td>
+</tr>
+<tr class="even">
+<td align="left">Urban</td>
+<td align="right">75.8</td>
+<td align="right">24.2</td>
+<td align="right">100</td>
+</tr>
+<tr class="odd">
+<td align="left">Pakistan</td>
+<td align="right">73.7</td>
+<td align="right">26.3</td>
+<td align="right">100</td>
+</tr>
+</tbody>
+</table>
 <p>Is the extended/joint family structure the reason behind this congestion? Table 4 shows that joint/extended households do have a larger size (i.e. average household members) and a slightly higher rate for congestion, but the living arrangement is not exactly a huge factor in determining congestion.</p>
-<p>```{r, echo=FALSE, message=FALSE, warning=FALSE} housing111 &lt;- read_excel(“housing.xlsx”, sheet = “table4”) housing111&lt;- as.data.frame(housing111) knitr::kable(housing111, caption = “Table 4: Living Arrangement, Mean Household Size and Prevalence of Congestion”)</p>
-<pre><code>
-### IS THE OCCUPANCY STATUS LEADING TO THE NOTION OF ‘DEFICIT’? 
-
-Security of tenure, gauged by the occupancy status in the PSLM, shows that this cannot be the case either as Pakistanis
-predominantly live in owned houses. As Table 5 shows, only a small proportion (11%) lives in rented houses. The sensational
-deficit estimate makes no mention of the fact that the ownership of dwellings is as much as 82% in Pakistan and rented space is
-only 11%. In any case, living in rented houses does not represent a ‘deficit’.
-
-```{r message=FALSE, warning=FALSE,echo=FALSE, paged.print=TRUE}
-housing1111 &lt;-  read_excel(&quot;housing.xlsx&quot;, sheet = &quot;table5&quot;)
-housing1111&lt;- as.data.frame(housing1111)
-knitr::kable(housing1111, caption = &quot;Table 5: Occupancy Status
-&quot;,col.names = c(&#39; &#39;, &#39;Rural&#39;, &#39;Urban&#39;, &#39;Pakistan&#39;))
-</code></pre>
+<table>
+<caption>Table 4: Living Arrangement, Mean Household Size and Prevalence of Congestion</caption>
+<colgroup>
+<col width="19%" />
+<col width="33%" />
+<col width="46%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Living Arrangement</th>
+<th align="right">Mean number of Household members</th>
+<th align="right">Proportion living in congested conditions (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Nuclear</td>
+<td align="right">5.53</td>
+<td align="right">11.8</td>
+</tr>
+<tr class="even">
+<td align="left">Joint/Extended</td>
+<td align="right">8.51</td>
+<td align="right">13.8</td>
+</tr>
+<tr class="odd">
+<td align="left">All</td>
+<td align="right">6.56</td>
+<td align="right">12.3</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="is-the-occupancy-status-leading-to-the-notion-of-deficit" class="section level3">
+<h3>IS THE OCCUPANCY STATUS LEADING TO THE NOTION OF ‘DEFICIT’?</h3>
+<p>Security of tenure, gauged by the occupancy status in the PSLM, shows that this cannot be the case either as Pakistanis predominantly live in owned houses. As Table 5 shows, only a small proportion (11%) lives in rented houses. The sensational deficit estimate makes no mention of the fact that the ownership of dwellings is as much as 82% in Pakistan and rented space is only 11%. In any case, living in rented houses does not represent a ‘deficit’.</p>
+<table>
+<caption>Table 5: Occupancy Status</caption>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Rural</th>
+<th align="right">Urban</th>
+<th align="right">Pakistan</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Owner</td>
+<td align="right">89.1</td>
+<td align="right">70.1</td>
+<td align="right">81.8</td>
+</tr>
+<tr class="even">
+<td align="left">Rented</td>
+<td align="right">3.3</td>
+<td align="right">23.6</td>
+<td align="right">11.2</td>
+</tr>
+<tr class="odd">
+<td align="left">Rent free</td>
+<td align="right">7.5</td>
+<td align="right">6.2</td>
+<td align="right">7.0</td>
+</tr>
+<tr class="even">
+<td align="left">Total</td>
+<td align="right">100.0</td>
+<td align="right">100.0</td>
+<td align="right">100.0</td>
+</tr>
+</tbody>
+</table>
 <blockquote>
 <p>Contrary to common perception, living in a rented house does not show ‘housing deficit’.</p>
 </blockquote>
@@ -195,8 +352,57 @@ knitr::kable(housing1111, caption = &quot;Table 5: Occupancy Status
 <div id="are-the-houses-structurally-stable-and-have-access-to-amenities" class="section level2">
 <h2>ARE THE HOUSES STRUCTURALLY STABLE AND HAVE ACCESS TO AMENITIES?</h2>
 <p>This is where the concern should be. The quality of structure and access to civic amenities need to improve. Table 6 shows that access to basic civic services, like waste disposal, clean drinking water, safe fuel for cooking and a much-improved sewerage system are the issues that need attention to alleviate the quality of housing. Even the very high access to electricity (for light source) does not mean an uninterrupted supply.</p>
-<p>```{r message=FALSE, warning=FALSE, echo=FALSE, paged.print=TRUE} housing6 &lt;- read_excel(“housing.xlsx”, sheet = “table6”) table6&lt;- as.data.frame(housing6) knitr::kable(table6, caption = “Table 6: Quality of Structure and Access to Amenities (%)”,col.names = c(’ ‘, ’Floor’, ‘Roof’, ‘Walls’, ‘Fuel for cooking’, ‘Source of light’, ‘Waste disposal’, ‘Drinking water’, ‘Toilet’ ))</p>
-<p>```</p>
+<table>
+<caption>Table 6: Quality of Structure and Access to Amenities (%)</caption>
+<colgroup>
+<col width="13%" />
+<col width="6%" />
+<col width="5%" />
+<col width="6%" />
+<col width="17%" />
+<col width="16%" />
+<col width="15%" />
+<col width="15%" />
+<col width="7%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Floor</th>
+<th align="right">Roof</th>
+<th align="right">Walls</th>
+<th align="right">Fuel for cooking</th>
+<th align="right">Source of light</th>
+<th align="right">Waste disposal</th>
+<th align="right">Drinking water</th>
+<th align="right">Toilet</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Standard</td>
+<td align="right">63</td>
+<td align="right">77.1</td>
+<td align="right">83.1</td>
+<td align="right">48.5</td>
+<td align="right">96.0</td>
+<td align="right">23.6</td>
+<td align="right">67.2</td>
+<td align="right">72.5</td>
+</tr>
+<tr class="even">
+<td align="left">Sub-standard</td>
+<td align="right">37</td>
+<td align="right">22.9</td>
+<td align="right">16.9</td>
+<td align="right">51.5</td>
+<td align="right">4.6</td>
+<td align="right">76.4</td>
+<td align="right">32.8</td>
+<td align="right">27.5</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="so-what-about-the-deficit" class="section level2">
 <h2>SO, WHAT ABOUT THE DEFICIT?</h2>
